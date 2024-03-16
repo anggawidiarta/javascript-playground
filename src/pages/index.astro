@@ -1,56 +1,38 @@
 ---
-import { CardHoverEffectDemo } from "../components/CardHoverEffect";
 import { AnimatedPinDemo } from "../components/AnimatedPinDemo";
+import BaseLayout from "../Layout/BaseLayout.astro";
 import "../css/style.css";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    /><link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.png"
+<BaseLayout
+  ><div
+    class="flex flex-col items-center justify-center w-full h-full gap-1 px-3 py-5"
+  >
+    <p
+      class="text-3xl font-extrabold text-center text-white hover:text-blue-400 transition-all duration-500 cursor-pointer"
+    >
+      My Javascript Playground
+    </p>
+    <p class="text-lg text-center text-white">
+      This Is My Mini Project I've Created In Order To Learn Javascript or
+      Typescript
+    </p>
+  </div>
+  <div
+    class="flex flex-wrap items-center justify-center flex-1 w-full h-full mb-5 mx-3"
+  >
+    <AnimatedPinDemo
+      title="Projects 1"
+      href="https://www.youtube.com/"
+      client:load
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Javascript Playground</title>
-  </head>
-  <body class="bg-black">
-    <div
-      class="flex flex-col items-center justify-center w-full h-full gap-1 px-3 py-5"
-    >
-      <p
-        class="text-3xl font-extrabold text-center text-white hover:text-blue-400 transition-all duration-500 cursor-pointer"
-      >
-        My Javascript Playground
-      </p>
-      <p class="text-lg text-center text-white">
-        This Is My Mini Project I've Created In Order To Learn Javascript or
-        Typescript
-      </p>
-    </div>
-    <div
-      class="flex flex-wrap items-center justify-center flex-1 w-full h-full mb-5 mx-3"
-    >
-      <AnimatedPinDemo
-        title="Projects 1"
-        href="https://www.youtube.com/"
-        client:load
-      />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-      <AnimatedPinDemo client:load />
-    </div>
-  </body>
-</html>
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+    <AnimatedPinDemo client:load />
+  </div></BaseLayout
+>
