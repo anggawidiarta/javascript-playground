@@ -50,34 +50,34 @@ search.addEventListener("click", async () => {
     const wind = document.querySelector(".weather-details .wind span");
 
     // Display the appropriate image for the weather
-    switch (json.weather[0].main) {
-      case "Clear":
-        image.src = "_/src/pages/weather-page/images/clear.png";
-        break;
+    // switch (json.weather[0].main) {
+    //   case "Clear":
+    //     image.src = "_/src/pages/weather-page/images/clear.png";
+    //     break;
 
-      case "Rain":
-        image.src = "_/src/pages/weather0page/images/rain.png";
-        break;
+    //   case "Rain":
+    //     image.src = "_/src/pages/weather0page/images/rain.png";
+    //     break;
 
-      case "Snow":
-        image.src = "_/src/pages/weather-page/images/snow.png";
-        break;
+    //   case "Snow":
+    //     image.src = "_/src/pages/weather-page/images/snow.png";
+    //     break;
 
-      case "Clouds":
-        image.src = "_/src/pages/weather-page/images/cloud.png";
-        break;
+    //   case "Clouds":
+    //     image.src = "_/src/pages/weather-page/images/cloud.png";
+    //     break;
 
-      case "Haze":
-        image.src = "_/src/pages/weather-page/images/mist.png";
-        break;
+    //   case "Haze":
+    //     image.src = "_/src/pages/weather-page/images/mist.png";
+    //     break;
 
-      case "Drizzle":
-        image.src = "_/src/pages/weather-page/images/drizzle.png";
-        break;
+    //   case "Drizzle":
+    //     image.src = "_/src/pages/weather-page/images/drizzle.png";
+    //     break;
 
-      default:
-        image.src = "";
-    }
+    //   default:
+    //     image.src = "";
+    // }
 
     // Display the weather data
     temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
