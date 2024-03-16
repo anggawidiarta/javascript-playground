@@ -7,6 +7,7 @@ interface AnimatedPinDemoProps {
   href?: string;
   titleName?: string;
   description?: string;
+  backgroundImageUrl?: string;
 }
 
 export function AnimatedPinDemo({
@@ -14,6 +15,7 @@ export function AnimatedPinDemo({
   href = "https://www.lipsum.com/",
   titleName = "Lorem ipsum dolor ",
   description = "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax ",
+  backgroundImageUrl = "https://dummyimage.com/600x400/280a94/f2eff2.jpg&text=Dummy+Image",
 }: AnimatedPinDemoProps) {
   return (
     <div className="h-[25rem] w-fit flex items-center justify-center">
@@ -25,7 +27,12 @@ export function AnimatedPinDemo({
           <div className="text-base !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">{description} </span>
           </div>
-          <div className="flex flex-1 w-full mt-4 rounded-lg bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+          <div
+            className="flex flex-1 w-full mt-4 bg-center bg-cover rounded-lg"
+            style={{
+              backgroundImage: `url(${backgroundImageUrl})`,
+            }}
+          />
         </div>
       </PinContainer>
     </div>
